@@ -86,3 +86,4 @@ exports.head = head;
 exports.reverse = reverse;
 exports.tail = tail;
 exports.sort = sort;
+exports.findLast = findLast;
