@@ -2,7 +2,7 @@
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 //create a function called `map`, it should take 2 parameters `array` and `iteratee`
 //`array` must be an array
-//`iteratee` must be a function that takes one parameter and returns a bool
+//`iteratee` must be a function that takes one parameter returns something
 //The point of the javascript map function is to take an array and return different array with the exact same number of items in it
 //The items will be whatever the function `iteratee` creates
 //in the map function create a new empty array and store in a variable named whatever you want (myNewArray)
