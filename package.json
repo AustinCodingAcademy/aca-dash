@@ -1,0 +1,19 @@
+{
+  "name": "andrew-dash",
+  "version": "1.0.0",
+  "description": "useful functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewSommer89/aca-dash.git"
+  },
+  "author": "Andrew Sommer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndrewSommer89/aca-dash/issues"
+  },
+  "homepage": "https://github.com/AndrewSommer89/aca-dash#readme"
+}
