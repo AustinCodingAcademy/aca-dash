@@ -11,9 +11,22 @@
 //iteratee is a function that must return something, capture whatever it returns in a variable
 //add the returned value from iteratee tp myNewArray
 //after looping, return  myNewArray
-function map(array, iteratee){
 
+let array1 = [1,3,5,7];
+function map(array, iteratee){
+  console.log(array);
+  let newArr = [];
+    for(let i=0; i<array.length; i++){
+        newArr.push(iteratee(array[i]));
+    }
+  console.log(newArr);
 }
+
+function iteratee1(item){
+  return item + 5;
+}
+
+map(array1, iteratee1);
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 //create a function called `filter`, it should take 2 parameters `array` and `iteratee`
@@ -24,10 +37,22 @@ function map(array, iteratee){
 //     passing in the item from the current loop
 //iteratee will return true or false, if true add the item to myNewArray else do not
 //after looping, return myNewArray
-function filter(array, iteratee){
 
+function filter(array, iteratee){
+    let newArr = [];
+    for(let i=0; i<array.length; i++){
+        if(iteratee2(array[i])){
+            newArr.push(array[i]);
+        }
+    }
+    console.log(newArr)
 }
 
+function iteratee2(item){
+    return item > 5;
+}
+
+filter(array1, iteratee2);
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
 //create a function called `find`, it should take 2 parameters `theArray` and `fnc`
 //loop theArray and call the fnc for each thing in the array, 
