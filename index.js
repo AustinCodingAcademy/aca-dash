@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 //create a function called `map`, it should take 2 parameters `array` and `iteratee`
@@ -23,7 +24,7 @@ function map(array, iteratee){
   return newArr;
 }
 
-//adds 5 to each item in array
+//adds 5 to an item
 function iteratee1(item){
   return item + 5;
 }
@@ -74,7 +75,7 @@ function find(theArray, fnc){
     }
 }
 
-//function find the first item in an array that is less than 5
+//function returns true if item is less than 5
 function fnc1(item){
     return item < 5;
 }
@@ -91,7 +92,7 @@ function findLast(theArray){
 findLast(array1); //output: 4
 
 
-//return the first element of the array
+//return the first element of an array
 function head(theArray){
     console.log(theArray[0]);
     return theArray[0];
