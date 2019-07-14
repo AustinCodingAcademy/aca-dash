@@ -1,4 +1,3 @@
-
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 //create a function called `map`, it should take 2 parameters `array` and `iteratee`
 //`array` must be an array
@@ -11,7 +10,15 @@
 //iteratee is a function that must return something, capture whatever it returns in a variable
 //add the returned value from iteratee tp myNewArray
 //after looping, return  myNewArray
+
 function map(array, iteratee){
+    let myNewArray=[];
+    for(let i = 0; i<array.length;i++){
+        let myIndex = array[i];
+        let myValue = iteratee(myIndex);
+        myNewArray.push(myValue);
+    }
+    return myNewArray;
 
 }
 
@@ -25,7 +32,13 @@ function map(array, iteratee){
 //iteratee will return true or false, if true add the item to myNewArray else do not
 //after looping, return myNewArray
 function filter(array, iteratee){
-
+    let myNewArray = [];
+    for(let i = 0; i<array.length;i++){
+        let index = array[i];
+        if(iteratee(index) === true){
+            myNewArray.push(index);
+        }
+    } return myNewArray;
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
@@ -35,18 +48,23 @@ function filter(array, iteratee){
 //fnc will return true or false, if true return the item 
 //after looping, return null
 function find(theArray, fnc){
-
+    for(let i=0; i<array.length;i++)
+    if(fnc(array[i]) === true){
+        return array[i];
+    }else{
+        return "Nothing returns true."
+    }
 }
 
 
 //return the last item in theArray
 function findLast(theArray){
-
+    return theArray[theArray.length-1];
 }
 
 //return the first element of the array
 function head(theArray){
-
+    return theArray[0];
 }
 
 //create a new array
@@ -54,7 +72,11 @@ function head(theArray){
 //add the item from each loop to the new array
 //return the new array
 function reverse(theArray){
-
+    myNewArray = [];
+    for(let i = theArray.length-1; i>=0; i--){
+    myNewArray.push(theArray[i]);
+    }
+    return myNewArray;
 }
 
 //create a new array
@@ -62,7 +84,11 @@ function reverse(theArray){
 //add the item from each loop to the new array except the first item
 //return the new array
 function tail(theArray){
-
+    myNewArray = [];
+    for(let i = theArray.length[1]; i<theArray.length; i++){
+        myNewArray.push(theArray[i]);
+    }
+    return myNewArray;
 }
 
 //implement the most basic sorting algorithm there is
@@ -76,7 +102,17 @@ function tail(theArray){
 //after each for loop check the variable, if true, continue the while loop
 //if false return theArray
 function sort(theArray){
-
+    for (let i = 0; i<theArray.length;i++){
+        for(let j = i+1; j<theArray.length;j++){
+          let holder;
+          if(theArray[i] > theArray[j]){
+            holder = theArray[i];
+            theArray[i] = theArray[j];
+            theArray[j] = holder;
+          }
+        }
+      }
+      return theArray;
 }
 
 exports.map = map;
@@ -87,3 +123,4 @@ exports.reverse = reverse;
 exports.tail = tail;
 exports.sort = sort;
 exports.findLast = findLast;
+
